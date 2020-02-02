@@ -18,8 +18,44 @@
         <li> Object.Create </li>
         <li> Prototype </li>
     </ul>
+    <h2>2. Mengenal Closures pada javascript : </h2>
+    <ul>
+        <li> Execution Context </li>
+        <ul style="list-style-type: circle;">
+            <li>
+                <b><i>Creation phase (konsep hoisting)</i> : </b>
+                <ul>
+                    <li>
+                        ketika javascript pertama kali dijalankan(run) maka akan mencari keyword function terlebih
+                        dahulu dan akan diset oleh function/code itu sendiri
+                    </li>
+                    <li>
+                        kemudian akan mencari keyword var/variable dan akan diset menjadi undefined
+                    </li>
+                    <li>
+                        javascript mendefiniskan window = global object, dan mendefinisikan this = window
+                    </li>
+                    <li>
+                        function akan membuat Local Execution Context yang didalamnya terdapat creation dan execution
+                        phase
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b><i>Execution phase</i> : </b>
+                <ul>
+                    <li>Mengeksekusi Javascript baris perbaris</li>
+                    <li>Untuk melihat bagaimana javascript mengeksekusi code kita : <a
+                            href="http://pythontutor.com/javascript.html"
+                            target="_blank">(http://pythontutor.com/javascript.html)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </ul>
 
-    <script src="script.js"></script>
+
+    <!-- <script src="lat_object.js"></script> -->
+    <script src="lat_closures.js"></script>
 </body>
 
 </html>
