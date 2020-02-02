@@ -1,14 +1,11 @@
-console.log(sayHello());
-
-var nama = 'apip';
-var umur = 27;
-
-console.log(sayHello());
-console.log(sayHello);
-
-function sayHello() {
-    return 'hello ' + nama + ' selamat ulang tahun yang ke ' + umur;
-}
+// console.log(sayHello());
+// var nama = 'apip';
+// var umur = 27;
+// console.log(sayHello());
+// console.log(sayHello);
+// function sayHello() {
+//     return 'hello ' + nama + ' selamat ulang tahun yang ke ' + umur;
+// }
 
 
 
@@ -48,17 +45,68 @@ function sayHello() {
 // console.log(cetakUrl('@aahSitiRobiah', '@dadan'));
 
 /* latihan hoisting */ // tebak outputnya seperti apa?
-function satu() {
-    var nama = 'apip';
-    console.log(nama);
-}
+// function satu() {
+//     var nama = 'apip';
+//     console.log(nama);
+// }
+// function dua() {
+//     console.log(nama);
+// }
+// console.log(nama);
+// var nama = 'Erik';
+// satu();
+// dua('dody');
+// console.log(nama);
 
-function dua() {
-    console.log(nama);
-}
 
-console.log(nama);
-var nama = 'Erik';
-satu();
-dua('dody');
-console.log(nama);
+
+/* Penerapan Closures */ // function factories
+/* Lexical scope */
+// function init() { // lexical scope
+//     var nama = 'apip'; // local variable
+//     function tampilNama() { // inner function (closure*)
+//         console.log(nama); // akses ke parent variable
+//     }
+//     console.dir(tampilNama); // untuk melihat closure
+// }
+// init();
+
+/* closure */
+/* contoh 1 */
+// function init() {
+//     /* cara 1 */
+//     // function tampilNama(nama) { // inner function (closure*)
+//     //     console.log(nama);
+//     // }
+//     // return tampilNama;
+//     /* cara 2 */
+//     return function (nama) { // inner function (closure*)
+//         console.log(nama);
+//     }
+// }
+// let panggilNama = init();
+// panggilNama('apip');
+// panggilNama('kurninawan');
+
+/* contoh 2 */
+// function ucapkanSalam(waktu) {
+//     return function (nama) {
+//         console.log('Halo ' + nama + ', Selamat ' + waktu + ', Semoga harimu menyenangkan!');;
+//     }
+// }
+// let selamatPagi = ucapkanSalam('Pagi');
+// let selamatSiang = ucapkanSalam('Siang');
+// let selamatMalam = ucapkanSalam('Malam');
+// selamatPagi('Apip');
+// selamatMalam('Aaah');
+
+/* contoh 3 */
+let add = (function () {
+    let counter = 0;
+    return function () {
+        return ++counter;
+    }
+})();
+console.log(add());
+console.log(add());
+console.log(add());
