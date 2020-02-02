@@ -17,7 +17,28 @@ let mahasiswa2 = {
     }
 }
 
+
 /* Function Declaration */
+function Mahasiswa(nama, energi) {
+    let mahasiswa = {};
+    mahasiswa.nama = nama;
+    mahasiswa.energi = energi;
+
+    mahasiswa.makan = function (porsi) {
+        this.energi += porsi;
+        console.log('halo ' + this.nama + ', Selamat Makan!');
+    }
+
+    mahasiswa.main = function (jam) {
+        this.energi -= jam;
+        console.log('halo ' + this.nama + ', Selamat Bermain!');
+    }
+
+    return mahasiswa;
+}
+
+let apip = Mahasiswa('apip', 10);
+let aah = Mahasiswa('aah', 5);
 
 
 /* Constructor Function */
