@@ -71,3 +71,21 @@
 
 
 /* Penerapan Arrow function dengan study kasus */
+/* mengambil element box dengan DOM */
+const box = document.querySelector('.box');
+/* menambah event */
+box.addEventListener('click', function () {
+    let satu = 'size';
+    let dua = 'caption';
+    if (this.classList.contains(satu)) {
+        [satu, dua] = [dua, satu];
+    }
+    // console.log(this);
+    /* menghilangkan atau menambahkan class pertama */
+    this.classList.toggle(satu);
+    setTimeout(() => {
+        // console.log(this);
+        /* menghilangkan atau menambahkan class kedua */
+        this.classList.toggle(dua);
+    }, 600);
+});
