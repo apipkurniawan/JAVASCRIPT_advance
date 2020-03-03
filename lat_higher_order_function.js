@@ -12,6 +12,7 @@
 
 
 
+
 // /* beberapa contoh sederhana higher order function */
 // // const angka = [-1, 8, 9, 1, 4, -5, -4, 3, 2, 9];
 
@@ -51,5 +52,46 @@
 
 
 
-/* latihan higher order function dengan study kasus */
-// blm
+
+/* 
+latihan higher order function dengan study kasus  :
+menampilkan jumlah dan durasi video yang bertuliskan JAVASCRIPT LANJUTAN 
+*/
+/* 
+ALGORITHM :
+- ambil semua element video
+- pilih hanya yang 'JAVASCRIPT LANJUTAN'
+- ambil durasi masing-masing video
+- ubah durasi menjadi float, lalu ubah menit menjadi detik
+- jumlahkan semua detik
+- ubah formtnya jadi jam menit detik
+- simpan di DOM
+*/
+/* eksekusi */
+/* ambil semua element video (masih dalam bentuk nodeList*/
+const videos = document.querySelectorAll('[data-duration]');
+/* ubah dari nodeList ke Array */
+const array_videos = Array.from(videos);
+/* ambil yang hanya 'JAVASCRIPT LANJUTAN' */
+const jml_vid = array_videos.filter(element => element.textContent.includes('JAVASCRIPT LANJUTAN')).length;
+const el_jsLanjutan = array_videos.filter(element => element.textContent.includes('JAVASCRIPT LANJUTAN'))
+    /* ambil durasi masing2 video */
+    .map(item => item.dataset.duration)
+    /* ubah durasi menjadi float */
+    .map(waktu => {
+        const parts = waktu.split(':').map(part => parseFloat(part));
+        /* ubah menjadi detik */
+        return (parts[0] * 60) + parts[1];
+    })
+    /* jumlahkan semua */
+    .reduce((total, detik) => total + detik);
+/* ubah menjadi format jam menit detik */
+const jam = Math.floor(el_jsLanjutan / 3600);
+const sisa_detik = el_jsLanjutan - (3600 * jam);
+const menit = Math.floor(sisa_detik / 60);
+const detik = sisa_detik - (menit * 60);
+/* simpan di DOM */
+const pDurasi = document.querySelector('.total-durasi');
+const pJmlVideo = document.querySelector('.jumlah-video');
+pDurasi.textContent = `${jam} jam ${menit} menit ${detik} detik`;
+pJmlVideo.textContent = `${jml_vid}`;
