@@ -32,7 +32,7 @@
 
 
 // /* HTML Fragments */
-// const mhs = {
+// const mhs = { // ini adalah object literal
 //     nama: 'apip',
 //     nrp: '212'
 // }
