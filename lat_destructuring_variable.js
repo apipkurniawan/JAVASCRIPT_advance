@@ -162,23 +162,24 @@
 // }
 // console.log(cetakMhs(mhs1));
 /* contoh 2 */
-// const mhs2 = {
-//     nama: 'apip kurniawan',
-//     umur: 27,
-//     lokasi: 'kuningan',
-//     nilai: {
-//         uas: 70,
-//         uts: 80
-//     }
-// }
-// function cetakMhs({
-//     nama,
-//     umur,
-//     nilai: {
-//         uas,
-//         uts
-//     }
-// }) {
-//     return `Halo, nama saya ${nama}, saya berumur ${umur} tahun, dan nilai Uas saya adalah ${uas}`;
-// }
-// console.log(cetakMhs(mhs2));
+const mhs2 = {
+    nama: 'apip kurniawan',
+    umur: 27,
+    lokasi: 'kuningan',
+    nilai: {
+        uas: 70,
+        uts: 80
+    }
+}
+
+function cetakMhs({
+    nama,
+    umur,
+    nilai: {
+        uas,
+        uts
+    }
+}) {
+    return `Halo, nama saya ${nama}, saya berumur ${umur} tahun, dan nilai Uas saya adalah ${uas}`;
+}
+console.log(cetakMhs(mhs2));
