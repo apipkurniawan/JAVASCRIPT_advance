@@ -33,6 +33,11 @@
 // mhs2[0] = 'aah';
 // console.log('array tanpa spread : ', mhs2);
 // console.log('array semula tanpa spread: ', mhs);
+/* latihan Spread Operator */
+const nama = document.querySelector('.nama');
+const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('');
+nama.innerHTML = huruf;
+
 
 /* Rest Parameter */
 /* contoh 1 */
@@ -80,11 +85,3 @@ function filterBy(type, ...args) {
     return args.filter(el => typeof el == type)
 }
 console.log(filterBy('number', 1, 2, 'apip', false, 4, 6, true, 'dian'));
-
-
-
-
-/* latihan Spread Operator */
-const nama = document.querySelector('.nama');
-const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('');
-nama.innerHTML = huruf;
