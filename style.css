@@ -23,3 +23,19 @@
 .hl {
     color: red;
 }
+
+h3 {
+    font-family: arial;
+    font-size: 80px;
+    color: blue;
+}
+
+.nama span {
+    display: inline-block;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.nama span:hover {
+    transform: scale(2) translateY(-20px);
+}
