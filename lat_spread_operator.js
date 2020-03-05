@@ -34,8 +34,57 @@
 // console.log('array tanpa spread : ', mhs2);
 // console.log('array semula tanpa spread: ', mhs);
 
+/* Rest Parameter */
+/* contoh 1 */
+// * penerapan pada function
+// function myFunct(...args) {
+// return args; // menghasilkan array menggunakan rest parameter
+// return [...arguments]; // menghasilkan array menggunakan spread operator
+// return Array.from(arguments); // menghasilkan array menggunakan funct array
+// }
+// console.log(myFunct(1, 2, 3, 4, 5));
+/* contoh 2 */
+// * penerapan pada looping dan hire-order-function
+// function jumlahkan(...angka) {
+// return angka.reduce((a, b) => a + b); // hire-order-function
+// let total = 0; // looping for..of
+// for (const a of angka) {
+//     total += a;
+// }
+// return total;
+// }
+// console.log(jumlahkan(1, 2, 3, 4, 5));
+/* contoh 3 */
+// * penerapan pada array destructuring
+// const kelompok = ['apip', 'hendra', 'ardi', 'arif', 'abi'];
+// const [ketua, wakil, ...anggota] = kelompok; // array destructuring
+// console.log(anggota);
+/* contoh 4 */
+// * penerapan pada object destructuring
+// const team = {
+//     pm: 'hendra',
+//     frontEnd1: 'apip',
+//     frontEnd2: 'abi',
+//     backEnd: 'lana',
+//     ux: 'adit',
+//     devOps: 'rama'
+// }
+// const {
+//     pm,
+//     ...myTeam
+// } = team;
+// console.log(pm);
+/* contoh kasus */
+// * penerapan pada study kasus (filtering)
+function filterBy(type, ...args) {
+    return args.filter(el => typeof el == type)
+}
+console.log(filterBy('number', 1, 2, 'apip', false, 4, 6, true, 'dian'));
 
-/* latihan */
+
+
+
+/* latihan Spread Operator */
 const nama = document.querySelector('.nama');
 const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join('');
 nama.innerHTML = huruf;
