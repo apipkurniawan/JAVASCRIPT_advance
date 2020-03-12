@@ -10,6 +10,19 @@
 </head>
 
 <body>
+  <h2>JAVASCRIPT</h2>
+  <p>* javascript adalah pemrograman tingkat tinggi dan dinamis yang secara umum dapat berjalan pada browser.</p>
+  <p>* javascript is a single-threaded, non-blocking, Asynchronous and concurrent language.</p>
+  <ul>
+    <li>thread adalah urutan eksekusi kode yang dapat dilakukan secara bebas/independent satu sama lain</li>
+    <li>blocking adalah pengerjaan task per task dengan menunggu task tersebut selesai terlebih dahulu baru pindah ke
+      task berikutnya</li>
+    <li>non-blocking adalah pengerjaan task per task tanpa menunggu task tersebut selesai terlebih dahulu sehingga bisa
+      pindah ke task berikutnya</li>
+    <li>single vs multi thread : lingkungan eksekusi 'task'</li>
+    <li>blocking vs non-blocking : teknik 'ngoding' (IO related)</li>
+    <li>synchronous vs asynchronous : teknik 'ngoding' (HTTP Request realted)</li>
+  </ul>
   <h2>1. Membuat object pada javascript :</h2>
   <ul>
     <li>Object literal</li>
@@ -199,9 +212,28 @@
       array</li>
     <li>rest parameter harus diletakan diakhir parameter lainnya, tidak bisa diawal</li>
   </ul>
+  <h2>9. Asynchronous in Javascript :</h2>
+  <ul>
+    <li>teknik Asynchronous pada javascript : callback, promise, ajax, async & Await</li>
+    <li>v8 engine untuk melakukan script javascript</li>
+    <li>v8 engine : memliki Heap dan Stack</li>
+    <li>Heap untuk alokasi memori</li>
+    <li>Stack untuk pemanggilan function dan excute script</li>
+    <li><a
+        href="http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D">tool_asynchronous</a>
+    </li>
+  </ul>
+  <h2>10. Callbacks in Javascript :</h2>
+  <ul>
+    <li>callback adalah sebuah function yang dikirimkan sebagai parameter function yang lain atau function yang
+      dieksekusi setelah function lain dijalankan.</li>
+  </ul>
 
 
 
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <!-- 1 -->
   <!-- <script src="lat_object.js"></script> -->
   <!-- 2 -->
@@ -217,7 +249,10 @@
   <!-- 7 -->
   <!-- <script src="lat_looping.js"></script> -->
   <!-- 8 -->
-  <script src="lat_spread_operator.js"></script>
+  <!-- <script src="lat_spread_operator.js"></script>  -->
+  <!-- 9, 10 -->
+  <script src="lat_async.js"></script>
+
 </body>
 
 </html>
